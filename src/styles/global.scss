@@ -1,0 +1,117 @@
+:root {
+  --root-font-size: 10px;
+
+  /* -------- Width -------- */
+
+  --max-width-content: 100rem;
+  --max-width-lines: 20rem;
+
+  /* -------- Spaces -------- */
+
+  --spaces-0_5: 0.2rem;
+  --spaces-1: 0.4rem;
+  --spaces-1_5: 0.6rem;
+  --spaces-2: 0.8rem;
+  --spaces-2_5: 1rem;
+  --spaces-3: 1.2rem;
+  --spaces-3_5: 1.4rem;
+  --spaces-4: 1.6rem;
+  --spaces-4_5: 1.8rem;
+  --spaces-5: 2rem;
+  --spaces-5_5: 2.2rem;
+  --spaces-6: 2.4rem;
+  --spaces-7: 2.8rem;
+  --spaces-8: 3.2rem;
+  --spaces-9: 3.6rem;
+  --spaces-10: 4rem;
+  --spaces-11: 4.4rem;
+  --spaces-12: 4.8rem;
+  --spaces-13: 5.2rem;
+  --spaces-14: 5.6rem;
+  --spaces-15: 6rem;
+  --spaces-16: 6.4rem;
+  --spaces-17: 6.8rem;
+  --spaces-18: 7.2rem;
+  --spaces-19: 7.6rem;
+  --spaces-20: 8rem;
+  --spaces-30: 12rem;
+  --spaces-40: 16rem;
+  --spaces-50: 20rem;
+
+  /* -------- Fonts -------- */
+  --font-size-1: 1rem;
+  --font-size-2: 1.2rem;
+  --font-size-3: 1.4rem;
+  --font-size-4: 1.6rem;
+  --font-size-5: 1.8rem;
+  --font-size-6: 2rem;
+  --font-size-7: 2.2rem;
+  --font-size-8: 2.4rem;
+  --font-size-9: 2.6rem;
+  --font-size-10: 2.8rem;
+  --font-size-11: 3rem;
+
+  /* -------- Colors -------- */
+
+  // Base Colors
+  --colors-base-white: #fff;
+  --colors-base-black: #000;
+  --colors-base-transparent: transparent;
+
+  // Gray Colors
+
+  --colors-light-gray-300: #eee;
+  --colors-light-gray-500: #999999;
+  --colors-light-gray-600: #555555;
+  --colors-light-gray-900: #212121;
+
+  --colors-dark-gray-100: #f5f5f5;
+  --colors-dark-gray-400: #666666;
+  --colors-dark-gray-700: #444444;
+
+  // Background Colors
+
+  --colors-background: var(--colors-light-gray-300);
+
+  // Font Colors
+
+  --colors-font-primary: var(--colors-light-gray-900);
+  --colors-font-secondary: var(--colors-light-gray-600);
+  --colors-font-placeholder: var(--colors-light-gray-500);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: var(--default-font-family);
+  font-size: var(--root-font-size);
+  background-color: var(--colors-background);
+  color: var(--colors-font-primary);
+  background-repeat: no-repeat;
+  height: 100%;
+
+  transition: background-color 0.3s;
+  will-change: background-color;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+textarea,
+button {
+  font-family: var(--default-font-family);
+}

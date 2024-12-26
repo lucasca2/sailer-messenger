@@ -1,0 +1,35 @@
+.wrapper {
+    position: relative;
+    padding: var(--spaces-6);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaces-4);
+
+    input {
+        width: 100%;
+        padding-right: calc(var(--spaces-5) + var(--spaces-4) + var(--spaces-4));
+    }
+
+    figure {
+        width: var(--spaces-5);
+        height: var(--spaces-5);
+    }
+
+    // > button {
+    //     border: none;
+    //     background-color: transparent;
+    //     cursor: pointer;
+
+    //     position: absolute;
+    //     top: 50%;
+    //     right: calc(var(--spaces-6) + var(--spaces-4));
+
+    //     transform: translateY(-50%);
+
+    //     &:disabled {
+    //         cursor: not-allowed;
+    //     }
+    // }
+
+}

@@ -1,0 +1,19 @@
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spaces-2_5);
+
+    border: none;
+    outline: none;
+
+    border-radius: var(--spaces-2);
+    height: var(--spaces-12);
+    padding: 0 var(--spaces-4);
+    font-size: var(--font-size-4);
+
+    background-color: var(--colors-base-white);
+    color: var(--colors-font-primary);
+
+    box-shadow: 0 var(--spaces-1) var(--spaces-1) rgba(0, 0, 0, 0.1);
+}

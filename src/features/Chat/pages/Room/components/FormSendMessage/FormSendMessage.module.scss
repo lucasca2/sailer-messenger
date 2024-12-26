@@ -1,0 +1,37 @@
+.wrapper {
+    position: relative;
+    padding: var(--spaces-6);
+
+    input {
+        width: 100%;
+        padding-right: calc(var(--spaces-5) + var(--spaces-4) + var(--spaces-4));
+    }
+
+    figure {
+        width: var(--spaces-5);
+        height: var(--spaces-5);
+    }
+
+    > button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+        right: calc(var(--spaces-6) + var(--spaces-4));
+
+        transform: translateY(-50%);
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.userTyping {
+    position: absolute;
+    font-size: var(--font-size-2);
+    top: var(--spaces-0_5);
+    right: var(--spaces-6);
+}

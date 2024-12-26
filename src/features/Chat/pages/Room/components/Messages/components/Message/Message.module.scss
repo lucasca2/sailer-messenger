@@ -1,0 +1,82 @@
+.messages {
+  overflow: auto;
+  padding: 0 var(--spaces-6);
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaces-4);
+
+  visibility: hidden;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row__yourself {
+  align-items: flex-end;
+
+  .message {
+    background-color: var(--colors-light-gray-900);
+    color: var(--colors-base-white);
+  }
+}
+
+.timestamp {
+  font-size: var(--font-size-1);
+  color: var(--colors-light-gray-500);
+  margin-top: var(--spaces-0_5);
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--spaces-2);
+  padding: var(--spaces-3) var(--spaces-3);
+  font-size: var(--font-size-3);
+
+  background-color: var(--colors-base-white);
+  color: var(--colors-light-gray-900);
+
+  box-shadow: 0 var(--spaces-1) var(--spaces-1) rgba(0, 0, 0, 0.1);
+
+  white-space: pre-wrap;
+  word-break: break-all;
+
+  @include breakpoints.mobile {
+    audio {
+      width: 21.6rem;
+    }
+  }
+}
+
+.nickname {
+  font-size: var(--font-size-2);
+  font-weight: 600;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spaces-4);
+
+  max-width: 50%;
+
+  figure {
+    width: var(--spaces-3);
+    height: var(--spaces-3);
+
+    flex-shrink: 0;
+  }
+
+  @include breakpoints.mobile {
+    max-width: 100%;
+  }
+}

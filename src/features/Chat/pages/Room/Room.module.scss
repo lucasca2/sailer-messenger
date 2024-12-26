@@ -1,0 +1,39 @@
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--spaces-10) 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--spaces-8);
+
+    @include breakpoints.mobile {
+        justify-content: stretch;
+        padding: var(--spaces-2) 0;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 64rem;
+    height: 64rem;
+
+    @include breakpoints.mobile {
+        height: unset;
+        max-width: unset;
+        border-radius: 0;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
