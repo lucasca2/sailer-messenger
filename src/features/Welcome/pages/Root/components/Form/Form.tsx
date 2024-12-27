@@ -9,7 +9,6 @@ import { useState } from "react";
 import { saveNickname } from "@/features/Chat/actions/saveNickname";
 import { createChat } from "@/features/Chat/api/createChat";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 type FormProps = {
   initialValues: {

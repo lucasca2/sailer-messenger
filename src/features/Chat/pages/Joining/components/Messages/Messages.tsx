@@ -4,7 +4,6 @@ import dayjs from "dayjs";
 import { classNames } from "@/utils/classNames";
 
 import { Message } from "@/features/Chat/api/getChatMessages";
-import { Icon } from "@/components/Icon/Icon";
 
 import styles from "./Messages.module.scss";
 import { useEffect, useRef, useState } from "react";

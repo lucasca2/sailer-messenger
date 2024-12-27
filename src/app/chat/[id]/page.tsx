@@ -2,9 +2,9 @@ import { Chat } from "@/features/Chat/Chat";
 import { Layout } from "@/layouts/Layout";
 
 type ChatPageParams = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export default async function ChatPage({ params }: ChatPageParams) {

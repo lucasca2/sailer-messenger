@@ -17,6 +17,7 @@ const useSocket = (props: UseSocketProps) => {
         socket.disconnect();
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   return { socket };

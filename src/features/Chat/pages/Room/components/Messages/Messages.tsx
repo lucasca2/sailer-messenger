@@ -1,6 +1,6 @@
 "use client";
 import styles from "./Messages.module.scss";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Message } from "./components/Message/Message";
 import { useMessages } from "@/features/Chat/provider/useMessages";
 import { useScrollToBottom } from "./hooks/useScrollToBottom";
@@ -18,6 +18,7 @@ export const Messages = ({ nickname }: MessagesProps) => {
 
   useEffect(() => {
     scrollToBottom();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages]);
 
   const messagesRender = useMemo(() => {
@@ -33,6 +34,7 @@ export const Messages = ({ nickname }: MessagesProps) => {
         type={message.type}
       />
     ));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages]);
 
   return (

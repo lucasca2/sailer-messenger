@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { updateChatPresence } from "../api/updateChatPresence";
-import { useDebounce } from "@/hooks/useDebounce";
 
 type UseUpdateChatPresenceProps = {
   chatId: string;
@@ -17,7 +16,7 @@ export const useUpdateChatTyping = ({
   const timeoutRef = useRef<NodeJS.Timeout>(null);
 
   const handleUpdatePresence = async (status: "online" | "typing") => {
-    const response = await updateChatPresence({
+    await updateChatPresence({
       id: chatId,
       user_id: nickname,
       status,
@@ -34,7 +33,7 @@ export const useUpdateChatTyping = ({
     timeoutRef.current = setTimeout(() => {
       setIsTyping(false);
     }, 1000);
-  }
+  };
 
   useEffect(() => {
     if (isTyping) {
@@ -42,7 +41,8 @@ export const useUpdateChatTyping = ({
     } else {
       handleUpdatePresence("online");
     }
-  }, [isTyping])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isTyping]);
 
-  return { setIsTyping: handleTyping};
+  return { setIsTyping: handleTyping };
 };

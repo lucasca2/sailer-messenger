@@ -4,7 +4,6 @@ import { Input } from "@/components/Input/Input";
 import styles from "./FormJoingTheChat.module.scss";
 import { Icon } from "@/components/Icon/Icon";
 import { useState } from "react";
-import { sendMessage } from "@/features/Chat/api/sendMessage";
 import { Label } from "@/components/Label/Label";
 import { Button } from "@/components/Button/Button";
 import { saveNickname } from "@/features/Chat/actions/saveNickname";

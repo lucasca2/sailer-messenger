@@ -1,12 +1,6 @@
 import { Api } from "@/services/Api/Api";
 
-export type ReadReceipt = {
-  // id: string;
-  // user_id: string;
-  // content: string;
-  // timestamp: Date;
-  // type: "text";
-};
+export type ReadReceipt = any;
 
 type GetChatReadReceiptsParams = {
   id: string;

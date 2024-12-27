@@ -15,7 +15,7 @@ export const List = async () => {
         {chat?.map((chat) => (
           <Card key={chat.chat_id} className={styles.chatItem}>
             <Icon name="message-chat-square" />
-            <span className={styles.chatName}>{chat.created_by}'s chat</span>
+            <span className={styles.chatName}>{chat.created_by}‘s chat</span>
             <span className={styles.participants}>
               <Icon name="users-01" />
               <span className={styles.participantsQuantity}>

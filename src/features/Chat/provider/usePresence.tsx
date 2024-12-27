@@ -63,10 +63,10 @@ export const PresenceProvider = ({
   const userTyping = useMemo(() => {
     const user = presence.find((user) => user.status === "typing");
 
-    if(user?.user_id === nickname) return;
-    
+    if (user?.user_id === nickname) return;
+
     return user;
-  }, [presence]);
+  }, [presence, nickname]);
 
   return (
     <PresenceContext.Provider value={{ presence, userTyping }}>

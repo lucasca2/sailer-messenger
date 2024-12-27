@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./Toast.module.scss";
 
@@ -17,8 +17,6 @@ export function Toast({
   message,
   timeout = 0,
   onClose,
-  error,
-  success,
 }: ToastProps) {
   const [hide, setHide] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -39,6 +37,7 @@ export function Toast({
       clearTimeout(hideTimeout);
       clearTimeout(closeTimeout);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!visible) return null;

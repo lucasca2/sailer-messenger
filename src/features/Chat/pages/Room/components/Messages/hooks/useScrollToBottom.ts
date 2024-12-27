@@ -26,6 +26,7 @@ export const useScrollToBottom = (
 
   useEffect(() => {
     handleScrollToBottom();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { scrollToBottom: handleScrollToBottom };

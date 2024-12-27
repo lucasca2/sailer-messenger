@@ -13,11 +13,11 @@ export const useUpdateChatPresence = ({
   nickname,
 }: UseUpdateChatPresenceProps) => {
   const [userPresence, setUserPresence] = useState<Presence>();
-  const handleBeforeUnload = async (event: BeforeUnloadEvent) => {
+  const handleBeforeUnload = async () => {
     await handleUpdatePresence("offline");
   };
 
-  const handleWindowFocus = async (event: Event) => {
+  const handleWindowFocus = async () => {
     await handleUpdatePresence("online");
   };
 
@@ -52,6 +52,7 @@ export const useUpdateChatPresence = ({
 
       handleUpdatePresence("offline");
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { userPresence };
