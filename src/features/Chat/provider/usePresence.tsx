@@ -34,6 +34,14 @@ export const PresenceProvider = ({
   useEffect(() => {
     socket.on("presence_updated", (newPresence: Presence) => {
       setPresence((currentPresence) => {
+        const presenceToUpdate = currentPresence.find(
+          (user) => user.user_id === newPresence.user_id
+        );
+
+        if (!presenceToUpdate) {
+          return [...currentPresence, newPresence];
+        }
+
         return currentPresence.map((user) => {
           if (user.user_id === newPresence.user_id) return newPresence;
 

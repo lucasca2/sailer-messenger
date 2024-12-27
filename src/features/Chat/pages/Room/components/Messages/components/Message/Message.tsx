@@ -18,7 +18,6 @@ type MessageProps = {
 
 export const Message = memo(
   ({ nickname, content, id, user_id, read, timestamp, type }: MessageProps) => {
-    console.log("message rendered >", content);
     const isOwnMessage = user_id === nickname;
 
     const rowClassName = classNames(styles.row, {

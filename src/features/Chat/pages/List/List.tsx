@@ -6,13 +6,13 @@ import styles from "./List.module.scss";
 import Link from "next/link";
 
 export const List = async () => {
-  const chat = await getChats();
+  const chats = await getChats();
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <h1>Chats</h1>
-        {chat?.map((chat) => (
+        {chats?.map((chat) => (
           <Card key={chat.chat_id} className={styles.chatItem}>
             <Icon name="message-chat-square" />
             <span className={styles.chatName}>{chat.created_by}‘s chat</span>
